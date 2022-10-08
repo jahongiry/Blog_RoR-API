@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ROR Blog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <meta name="author" content="https://www.linkedin.com/in/ritobroto-m3">
+    <meta name="description" content="It's a simple blog application developed using ROR">
+  </head>
+
+  <body>
+    <p><%= notice %></p>
+    <p><%= alert %></p>
+
+    <%= yield %>
+
+    <div id="user_nav">
+      <% if user_signed_in? %>
+          Signed in as <%= current_user.email %>. This cannot be cheese?
+          <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+      <% else %>
+          <%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
+      <% end %>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,52 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "posts.css";
+@import "user.css";
+
+.form-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  width: 90%;
+}
+
+.form-blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.5em solid #646464;
+  padding: 1em;
+  margin: 0 auto;
+  width: 75%;
+}
+
+.input-item {
+  padding: 0.8rem;
+  margin: 0.6rem auto;
+  border-radius: 1em;
+}
+
+.submit-button {
+  background-color: #fff;
+  padding: 0.9em;
+  color: blue;
+  margin: 0.6rem auto;
+  border: 1px solid blue;
+  font-weight: 600;
+  border-radius: 1em;
+}
