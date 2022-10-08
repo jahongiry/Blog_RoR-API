@@ -1,7 +1,4 @@
 class ApplicationController < ActionController::Base
-  # protect_from_forgery with: :exception
-
-  #  for api calls
   protect_from_forgery prepend: true
 
   before_action :authenticate_user!, unless: :api_path
